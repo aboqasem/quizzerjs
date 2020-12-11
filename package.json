@@ -1,0 +1,22 @@
+{
+  "name": "quizzerjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/aboqasem/quizzerjs.git"
+  },
+  "author": "Mohammad Al Zouabi",
+  "license": "MIT",
+  "dependencies": {
+    "chromedriver": "^87.0.2",
+    "dotenv": "^8.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.8"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
