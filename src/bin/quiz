@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+const { quiz } = require('../quiz');
+
+if (process.argv.length != 3) {
+  console.log(`Usage: node quiz <Quizziz URL>`);
+  process.exit(1);
+}
+
+const quizzizUrl = process.argv[2];
+quiz(quizzizUrl);
