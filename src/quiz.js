@@ -6,9 +6,9 @@ require('chromedriver');
 const { By, Key, WebElement } = require('selenium-webdriver');
 const {
   getDriver, tryUntilDone, tryUntilError, sleep, shuffled,
-} = require('./helper');
+} = require('./quiz/helper');
 
-const questionsAnswers = require('./questionsAnswers.json');
+const questionsAnswers = require('./quiz/questionsAnswers.json');
 
 async function quiz(quizUrl) {
   const studentsCredentials = shuffled(process.env.CREDENTIALS.split('\n'));
