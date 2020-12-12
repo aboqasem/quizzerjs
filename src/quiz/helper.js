@@ -13,7 +13,7 @@ async function getDriver(binaryPath) {
   return driver;
 }
 
-async function tryUntilDone(fn, message) {
+async function tryUntilDone(fn, msg) {
   // eslint-disable-next-line no-constant-condition
   while (true) {
     try {
@@ -21,18 +21,18 @@ async function tryUntilDone(fn, message) {
       await fn();
       break;
     } catch (error) {
-      console.log(`${message}`);
+      console.log(`${msg}`);
     }
   }
 }
 
-async function tryUntilError(fn, message) {
+async function tryUntilError(fn, msg) {
   // eslint-disable-next-line no-constant-condition
   while (true) {
     try {
       // eslint-disable-next-line no-await-in-loop
       await fn();
-      console.log(`${message}`);
+      console.log(`${msg}`);
     } catch (error) {
       break;
     }
