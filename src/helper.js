@@ -21,9 +21,7 @@ async function tryUntilDone(fn, message) {
       await fn();
       break;
     } catch (error) {
-      console.log('==================================================');
-      console.log(`${message}\n${error}`);
-      console.log('==================================================');
+      console.log(`${message}`);
     }
   }
 }
@@ -34,13 +32,8 @@ async function tryUntilError(fn, message) {
     try {
       // eslint-disable-next-line no-await-in-loop
       await fn();
-      console.log('==================================================');
       console.log(`${message}`);
-      console.log('==================================================');
     } catch (error) {
-      console.log('==================================================');
-      console.log(`${message}\n${error}`);
-      console.log('==================================================');
       break;
     }
   }
