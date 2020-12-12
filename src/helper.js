@@ -43,6 +43,20 @@ function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
+function shuffled(a) {
+  if (a.length <= 1) return a;
+  const arr = a;
+  let elementsLeft = arr.length;
+
+  while (elementsLeft) {
+    const randIndex = Math.floor(Math.random() * (elementsLeft -= 1));
+    const temp = arr[elementsLeft];
+    arr[elementsLeft] = arr[randIndex];
+    arr[randIndex] = temp;
+  }
+  return arr;
+}
+
 module.exports = {
-  getDriver, tryUntilDone, tryUntilError, sleep,
+  getDriver, tryUntilDone, tryUntilError, sleep, shuffled,
 };

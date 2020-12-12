@@ -5,13 +5,13 @@ require('chromedriver');
 
 const { By, Key, WebElement } = require('selenium-webdriver');
 const {
-  getDriver, tryUntilDone, tryUntilError, sleep,
+  getDriver, tryUntilDone, tryUntilError, sleep, shuffled,
 } = require('./helper');
 
 const questionsAnswers = require('./questionsAnswers.json');
 
 async function quiz(quizUrl) {
-  const studentsCredentials = process.env.CREDENTIALS.split('\n');
+  const studentsCredentials = shuffled(process.env.CREDENTIALS.split('\n'));
 
   // eslint-disable-next-line no-restricted-syntax
   for (const studentCredential of studentsCredentials) {
