@@ -45,7 +45,7 @@ function sleep(ms) {
 
 function shuffled(a) {
   if (a.length <= 1) return a;
-  const arr = a;
+  const arr = [...a];
   let elementsLeft = arr.length;
 
   while (elementsLeft) {
